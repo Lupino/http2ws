@@ -1,0 +1,44 @@
+name:                http2ws
+version:             0.1.0.0
+github:              "Lupino/http2ws"
+license:             BSD3
+author:              "Lupino"
+maintainer:          "lmjubuntu@gmail.com"
+copyright:           "MIT"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/Lupino/http2ws#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+executables:
+  http2ws:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - websockets
+    - wai-extra
+    - warp
+    - wai-websockets
+    - wai
+    - http-types
+    - optparse-applicative
+    - streaming-commons
+    - unliftio
+    - map-io
+    - bytestring
